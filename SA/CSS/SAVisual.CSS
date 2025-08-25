@@ -1,0 +1,127 @@
+/* SAVisual.CSS */
+
+/* Reset básico para margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f9fc;
+    color: #333;
+    padding: 20px;
+}
+
+/* Título da página */
+body > b {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #004080;
+}
+
+/* Formulário */
+form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 480px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Tabela do formulário */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espaçamento entre linhas */
+}
+
+/* Células das perguntas */
+td[rowspan="2"] {
+    vertical-align: middle;
+    font-weight: bold;
+    padding-right: 15px;
+    width: 45%;
+    color: #004080;
+}
+
+/* Células dos inputs */
+td:not([rowspan]) {
+    width: 55%;
+}
+
+/* Inputs e selects */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #0066cc;
+    outline: none;
+    background-color: #e6f0ff;
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0066cc;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004a99;
+}
+
+/* Botão Voltar dentro do link - tirar estilo padrão do link */
+a {
+    text-decoration: none;
+}
+
+a button {
+    background-color: #999999;
+}
+
+a button:hover {
+    background-color: #666666;
+}
+
+/* Centralizar imagem */
+td[rowspan="2"] > center > img {
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}

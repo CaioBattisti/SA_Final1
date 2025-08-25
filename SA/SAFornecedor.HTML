@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Fornecedor</title>
+    <link rel="stylesheet" type="text/css" href="CSS/SAEstilo.CSS" media="all">
+
+    <!-- Importa o arquivo JS externo -->
+    <script src="Mascaras/FornecedorMascara.js" defer></script>
+
+    <style>
+        li {
+            float: left;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="Form_Front_Back/SalvarFornecedor.PHP" onsubmit="return validarEmail()">
+        <table align="center">
+            <tr>
+                <td><img src="Image/C.png" width="200" height="120" /></td>
+                <td colspan="2">Cadastro Fornecedor(a):</td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>ID:</td>
+                <td><input type="text" id="ID" name="ID"></td>
+            </tr>
+            <tr>
+                <td>Nome Fornecedor:</td>
+                <td><input type="text" id="NomeFornecedor" name="NomeFornecedor" oninput="mascara(this, ApenasLetras)" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" id="Email" name="Email" placeholder="exemplo@gmail.com" oninput="mascara(this, EmailMascara)" required></td>
+            </tr>
+            <tr>
+                <td>Telefone:</td>
+                <td><input type="text" id="Telefone" name="Telefone" maxlength="15" placeholder="(99) 99999-9999" oninput="mascara(this, telefone)" required></td>
+            </tr>
+            <tr>
+                <td>Produto:</td>
+                <td><input type="text" id="Produto" name="Produto" oninput="mascara(this, ApenasLetras)" required></td>
+            </tr>
+            <tr>
+                <td>Transporte:</td>
+                <td><input type="text" id="Transporte" name="Transporte" oninput="mascara(this, ApenasLetras)" required></td>
+            </tr>
+            <tr>
+                <td>Data de Início de Contrato:</td>
+                <td><input type="date" id="InicioContrato" name="InicioContrato" required></td>
+            </tr>
+            <tr>
+                <td>Data de Final de Contrato:</td>
+                <td><input type="date" id="FinalContrato" name="FinalContrato" required></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Cadastrar</button></td>
+                <td>
+                    <a href="SA_TelaPrincipal.HTML">
+                        <button type="button">Voltar</button>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
