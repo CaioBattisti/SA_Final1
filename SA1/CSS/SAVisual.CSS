@@ -1,3 +1,5 @@
+/* SAVisual.CSS */
+
 /* Reset básico para margem e padding */
 * {
     margin: 0;
@@ -13,15 +15,21 @@ body {
     padding: 20px;
 }
 
-/* Formulário alinhado à esquerda */
+/* Título da página */
+body > b {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #004080;
+}
+
+/* Formulário */
 form {
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 20px 30px;
     border-radius: 8px;
     max-width: 480px;
-    /* Retira centralização */
-    margin: 0;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
@@ -32,42 +40,25 @@ table {
     border-spacing: 0 10px; /* Espaçamento entre linhas */
 }
 
-/* Célula da imagem */
+/* Células das perguntas */
 td[rowspan="2"] {
     vertical-align: middle;
+    font-weight: bold;
     padding-right: 15px;
     width: 45%;
-}
-
-/* Centralizar imagem na célula */
-td[rowspan="2"] > img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-/* Cabeçalho da tabela */
-th {
     color: #004080;
-    font-size: 20px;
-    text-align: center;
-    padding-bottom: 10px;
 }
 
-/* Células dos labels */
+/* Células dos inputs */
 td:not([rowspan]) {
     width: 55%;
-    font-weight: bold;
-    color: #004080;
-    padding-left: 10px;
-    vertical-align: middle;
 }
 
-/* Inputs */
+/* Inputs e selects */
 input[type="text"],
 input[type="number"],
-input[type="date"] {
+input[type="date"],
+select {
     width: 100%;
     padding: 8px 10px;
     border: 1.5px solid #ccc;
@@ -78,7 +69,8 @@ input[type="date"] {
 
 input[type="text"]:focus,
 input[type="number"]:focus,
-input[type="date"]:focus {
+input[type="date"]:focus,
+select:focus {
     border-color: #0066cc;
     outline: none;
     background-color: #e6f0ff;
@@ -101,7 +93,7 @@ button:hover {
     background-color: #004a99;
 }
 
-/* Botão Voltar dentro do link */
+/* Botão Voltar dentro do link - tirar estilo padrão do link */
 a {
     text-decoration: none;
 }
@@ -114,7 +106,22 @@ a button:hover {
     background-color: #666666;
 }
 
-/* Alinhamento e espaçamento das células */
-td, th {
-    padding: 8px 10px;
+/* Centralizar imagem */
+td[rowspan="2"] > center > img {
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
 }
